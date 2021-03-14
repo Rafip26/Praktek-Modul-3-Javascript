@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Latihan 4.6 Nomor 1</title>
+    </head>
+<body>
+    <form method="POST" name="form_nilai">
+    <h1>Pengecekan Nilai</h1>
+
+    <!-- Menginput textbox untuk mendapat nilai -->
+    <p>Masukkan Nilai : <input type="text" name="nilai" size="20"></p>
+    <p>Nilai Anda : <input type="text" name="hasil" size="20"></p>
+
+    <!-- Menginput button untuk mengeksekusi function -->
+    <p><input type="button" value="Hitung" name="B1" onclick=ceknilai()>
+    <input type="reset" name="B2"></p>
+    </form>
+    <script language="Javascript">
+
+        // memanggil function untuk mencek nilai
+        function ceknilai () {
+            
+            // deklarasi dan input nilai variabel
+            var val1 = document.form_nilai. nilai. value
+
+            // seleksi nilai menggunakan if else
+            if (val1<=40) 
+                document.form_nilai.hasil. value="E" // output : E 
+            else if (val1<=55) 
+                document.form_nilai.hasil. value="D" // output : D
+            else if (val1<=60) 
+                document.form_nilai.hasil. value="C" // output : C
+            else if (val1<=65) 
+                document.form_nilai.hasil. value="BC" // output : BC
+            else if (val1<=70) 
+                document.form_nilai.hasil. value="B" // output : B
+            else if (val1<=80) 
+                document.form_nilai.hasil. value="AB" // output : AB
+            else if (val1<=100) 
+                document.form_nilai.hasil. value="A"  // output : A
+            else
+            document.form_nilai.hasil. value="Kosong" // output : Kosong
+        } 
+    </script></body></html>
